@@ -1,0 +1,10 @@
+.green {
+  background-color: green;
+}
+.textRed {
+  color: red;
+}
+#box {
+  width: 300px;
+  height: 200px;
+}
