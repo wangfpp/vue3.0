@@ -6,6 +6,7 @@ let myInfo = {
 
 let handler = {
   get: function(target, property, receiver) {
+    console.log(target, property);
     if(Reflect.has(target, property)) {
       return target[property];
     }
@@ -17,4 +18,7 @@ let handler = {
     }
   }
 };
+myInfo.weight = 70;
 let proxyObj = new Proxy(myInfo, handler);
+proxyObj.age;
+proxyObj.weight;
