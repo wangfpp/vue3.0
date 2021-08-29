@@ -20,8 +20,6 @@ const packageDir = packagesAll.filter(item => {
  */ 
 async function build(target) {
   await execa("rollup", ["-c", "--environment", `TARGET:${target}`], {stdio: "inherit"});
-  let buildOptions = fs.readFileSync(`packages/${target}/package.json`).toString();
-  console.log(JSON.parse(buildOptions).buildOptions);
 }
 
 
